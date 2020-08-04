@@ -1,7 +1,9 @@
 import reducer from './appReducer';
 import {
-  UPDATE_USER_SEARCH
-} from '../actions/viewerActions';
+  UPDATE_USER_SEARCH,
+  GET_USER_INFO,
+  GET_USER_REPOS
+} from '../actions/userActions';
 
 describe('app Reducer', () => {
   it('sets the username in state', () => {
@@ -21,16 +23,31 @@ describe('app Reducer', () => {
     });
   });
 
-  // it('sets the username in state', () => {
-    
-  // });
+  it('sets the userInfo in state', () => {
+    const state = {
+      userInfo: {}
+    };
 
-  // it('sets the username in state', () => {
-    
-  // });
+    const action = {
+      type: GET_USER_INFO,
+      payload: { 
+        userName: 'JoLeaper',
+        followers: 2,
+        following: 1,
+        url: 'github.com/JoLeaper'
+      }
+    };
 
-  // it('sets the username in state', () => {
-    
-  // });
+    const newState = reducer(state, action);
+
+    expect(newState).toEqual({
+      userInfo: { 
+        userName: 'JoLeaper',
+        followers: 2,
+        following: 1,
+        url: 'github.com/JoLeaper'
+      }
+    });
+  });
 
 });
