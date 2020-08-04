@@ -50,4 +50,21 @@ describe('app Reducer', () => {
     });
   });
 
+  it('sets the userRepos in state', () => {
+    const state = {
+      userRepos: []
+    };
+
+    const action = {
+      type: GET_USER_REPOS,
+      payload: ['link1.com', 'link2.com', 'link3.com']
+    };
+
+    const newState = reducer(state, action);
+
+    expect(newState).toEqual({
+      userRepos: ['link1.com', 'link2.com', 'link3.com'] 
+    });
+  });
+
 });

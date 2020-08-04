@@ -1,7 +1,7 @@
 export const initialState = {
   userName: '',
   userInfo: {},
-  repos: []
+  userRepos: []
 };
 
 import {
@@ -17,7 +17,7 @@ export default function reducer(state, action) {
     case GET_USER_INFO:
       return { ...state, userInfo: action.payload };
     case GET_USER_REPOS:
-      return { ...state, repos: action.payload };
+      return { ...state, userRepos: action.payload };
     default: 
       return state;
   }
