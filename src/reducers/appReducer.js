@@ -6,17 +6,17 @@ export const initialState = {
 
 import {
   UPDATE_USER_SEARCH,
-  GET_USER_INFO,
-  GET_USER_REPOS
+  SET_USER_INFO,
+  SET_USER_REPOS
 } from '../actions/userActions';
 
 export default function reducer(state, action) {
   switch(action.type) {
     case UPDATE_USER_SEARCH:
       return { ...state, userName: action.payload };
-    case GET_USER_INFO:
+    case SET_USER_INFO:
       return { ...state, userInfo: action.payload };
-    case GET_USER_REPOS:
+    case SET_USER_REPOS:
       return { ...state, userRepos: action.payload };
     default: 
       return state;

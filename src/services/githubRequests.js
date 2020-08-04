@@ -1,4 +1,4 @@
-export const getUserInfo = (username) => {
+export const fetchUserInfo = (username) => {
   return fetch(`https://api.github.com/users/${username}`)
     .then(res => res.json())
     .then(({ login, followers, following, html_url }) => {
@@ -11,7 +11,7 @@ export const getUserInfo = (username) => {
     });
 };
 
-export const getUserRepos = (username) => {
+export const fetchUserRepos = (username) => {
   return fetch(`https://api.github.com/users/${username}/repos`)
     .then(res => res.json())
     .then(res => res.map(repo => repo.html_url));

@@ -8,21 +8,21 @@ export const useState = () => {
 };
 
 export const useDispatch = () => {
-  const dispatch = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
   return dispatch;
 };
 
-export const userUserName = () => {
+export const useUserName = () => {
   const { userName } = useContext(AppContext);
   return userName;
 };
 
-export const useUserInfo = () => {
+export const userUserInfo = () => {
   const { userInfo } = useContext(AppContext);
   return userInfo;
 };
 
-export const useRepos = () => {
+export const userRepos = () => {
   const { userRepos } = useContext(AppContext);
   return userRepos;
 };
