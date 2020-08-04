@@ -13,7 +13,6 @@ export default function SearchBar() {
     e.preventDefault();
     Promise.all([fetchUserInfo(userName), fetchUserRepos(userName)])
       .then(([userInfo, userRepos]) => {
-        console.log(userInfo, userRepos);
         dispatch(setUserInfo(userInfo));
         dispatch(setUserRepos(userRepos));
       });

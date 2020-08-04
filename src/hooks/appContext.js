@@ -13,16 +13,16 @@ export const useDispatch = () => {
 };
 
 export const useUserName = () => {
-  const { userName } = useContext(AppContext);
-  return userName;
+  const { state } = useContext(AppContext);
+  return state.userName;
 };
 
-export const userUserInfo = () => {
-  const { userInfo } = useContext(AppContext);
-  return userInfo;
+export const useUserInfo = () => {
+  const { state } = useContext(AppContext);
+  return state.userInfo;
 };
 
-export const userRepos = () => {
-  const { userRepos } = useContext(AppContext);
-  return userRepos;
+export const useUserRepos = () => {
+  const { state } = useContext(AppContext);
+  return state.userRepos;
 };
