@@ -4,3 +4,11 @@ export const updateUserSearch = (username) => ({
   type: UPDATE_USER_SEARCH,
   payload: username
 });
+
+export const getUserInfo = () => ({
+  
+});
+
+export const getUserRepos = () => ({
+  
+});
