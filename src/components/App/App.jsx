@@ -1,6 +1,15 @@
 import React from 'react';
+import SearchBar  from '../SearchBar/SearchBar';
+import UserInfo from '../UserInfo/UserInfo';
+import RepoList from '../RepoList/RepoList';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <SearchBar />
+      <UserInfo />
+      <RepoList />
+    </>
+  );
 }
   
