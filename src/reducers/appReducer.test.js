@@ -1,8 +1,8 @@
 import reducer from './appReducer';
 import {
   UPDATE_USER_SEARCH,
-  GET_USER_INFO,
-  GET_USER_REPOS
+  SET_USER_INFO,
+  SET_USER_REPOS
 } from '../actions/userActions';
 
 describe('app Reducer', () => {
@@ -29,7 +29,7 @@ describe('app Reducer', () => {
     };
 
     const action = {
-      type: GET_USER_INFO,
+      type: SET_USER_INFO,
       payload: { 
         userName: 'JoLeaper',
         followers: 2,
@@ -56,7 +56,7 @@ describe('app Reducer', () => {
     };
 
     const action = {
-      type: GET_USER_REPOS,
+      type: SET_USER_REPOS,
       payload: ['link1.com', 'link2.com', 'link3.com']
     };
 
